@@ -45,6 +45,6 @@ public class PlayerLoader : NetworkBehaviour
         _controller.SetCharacter(unit.GetComponent<Character>(), isLocalPlayer);
 
         Character character = unit.GetComponent<Character>();
-        InventoryUI.Instance.SetInventory(character.inventory);
+        InventoryUI.instance.SetInventory(character.inventory);
     }
 }

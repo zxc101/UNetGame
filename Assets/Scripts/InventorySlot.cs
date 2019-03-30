@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.UIElements;
+using UnityEngine.UI;
 
-public class InventarySlot : MonoBehaviour
+public class InventorySlot : MonoBehaviour
 {
     public Image icon;
     public Button removeButton;
@@ -19,12 +19,12 @@ public class InventarySlot : MonoBehaviour
         removeButton.interactable = true;
     }
 
-    public void ClearSlot(Item newItem)
+    public void ClearSlot()
     {
         _item = null;
         icon.sprite = null;
-        icon.enabled = null;
-        removeButton.interactable = null;
+        icon.enabled = false;
+        removeButton.interactable = false;
     }
 
     public void OnRemoveButton()

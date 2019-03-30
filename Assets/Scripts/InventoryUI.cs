@@ -35,7 +35,7 @@ public class InventoryUI : MonoBehaviour
     public void SetInventory(Inventory newInventory)
     {
         _inventory = newInventory;
-        _inventory.OnItemChanged += itemChanged;
+        _inventory.OnItemChanged += ItemChanged;
         var childs = _itemParent.GetComponentsInChildren<InventorySlot>();
         foreach(var child in childs)
         {
@@ -46,7 +46,7 @@ public class InventoryUI : MonoBehaviour
         for (int i = 0; i < _inventory.Space; i++)
         {
             _slots[i] = Instantiate(_slotPrefab, _itemParent);
-            _slots[i].Inventory = _inventory;
+            _slots[i].inventory = _inventory;
             if (i < _inventory.items.Count) _slots[i].SetItem(_inventory.items[i]);
             else _slots[i].ClearSlot();
         }
