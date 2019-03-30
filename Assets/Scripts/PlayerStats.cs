@@ -1,6 +1,3 @@
-﻿namespace Geekbrains
+﻿public class PlayerStats : UnitStats
 {
-	public class PlayerStats : UnitStats
-	{
-	}
 }
